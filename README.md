@@ -34,21 +34,21 @@ git clone ...
 
 Ниже приведены доступные конечные точки API:
 
-- **POST /api/accounts**: Создайте новую учетную запись с уникальным именем пользователя и начальным балансом. Для примера localhost:8080/api/accounts?username=214&password=123456&initialBalance=100
+- **POST /api/accounts**: Создайте новую учетную запись с уникальным именем пользователя и начальным балансом. Для примера `localhost:8080/api/accounts?username=214&password=123456&initialBalance=100`
 Создать надо сразу двух как минимум
-localhost:8080/api/accounts?username=27314&password=123456&initialBalance=100
+`localhost:8080/api/accounts?username=27314&password=123456&initialBalance=100`
 
 - **POST /api/accounts/login**: Аутентифицируйте пользователя, указав имя пользователя и пароль.
-Тут реализовано кастомная аутентификация и авторизация но не Spring Security, думал не имеет смысла добавить ведь главное надо логику транзакции правильно прописать. Для примера localhost:8080/api/accounts/login?username=214&password=123456
+Тут реализовано кастомная аутентификация и авторизация но не Spring Security, думал не имеет смысла добавить ведь главное надо логику транзакции правильно прописать. Для примера `localhost:8080/api/accounts/login?username=214&password=123456`
 
 - **POST /api/logout**: Выйдите из системы аутентифицированного пользователя.
-localhost:8080/api/accounts/login
+`localhost:8080/api/accounts/logout`
 
 - **GET /api/accounts/{AccountId}/balance**: Получить данные учетной записи по идентификатору учетной записи.
-  localhost:8080/api/accounts/1/balance
+  `localhost:8080/api/accounts/1/balance`
 
 - **POST /api/transactions**: Перевод средств с одного счета на другой.
-Для примера localhost:8080/api/transactions?destinationAccountId=2&amount=10
+Для примера `localhost:8080/api/transactions?destinationAccountId=2&amount=10`
 тут достатосно прописать АЙДИ того кому надо отправить и сколько
 
 ## Тесты
